@@ -7,19 +7,73 @@
     <title>中联环境分体式垃圾站业务部</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/中联logo.ico"/>
     <style>
-        body{
+        /*PC端样式*/
+@media screen and (min-width: 1030px) {
+    .home{
+        margin-left: 200px;
+        margin-top: 4px;
+    }
+    .maintext1{
+        font-size: 48px;
+        font-weight: bold;
+        color: #53565a;
+        margin-top: -250px;
+    }
+    .maintext2{
+        font-size: 24px;
+        font-weight: bold;
+        color: #53565a;
+    }
+}
+
+/*ipad端样式*/
+@media screen and (min-width: 750px) and (max-width: 1030px) {
+    #heading>ul {
+        display: none;
+    }
+    .home{
+        margin-left: 200px;
+        margin-top: 4px;
+    }
+    .maintext1{
+        font-size: 48px;
+        font-weight: bold;
+        color: #53565a;
+        margin-top: -250px;
+    }
+    .maintext2{
+        font-size: 24px;
+        font-weight: bold;
+        color: #53565a;
+    }
+}
+
+
+/*手机端样式*/
+@media screen and (max-width: 750px) {
+    #heading>ul {
+        display: none;
+    }
+    .home{
+        position: absolute;
+        left: -150px;
+        top: 0;
+    }
+    .maintext1{
+        font-size: 32px;
+        font-weight: bold;
+        color: #53565a;
+        margin-top: -250px;
+    }
+    .maintext2{
+        font-size: 16px;
+        font-weight: bold;
+        color: #53565a;
+    }
+}
+body{
     margin: 0;
     padding: 0;
-}
-#container{
-    width: 100%;
-    height: 3450px;
-    background-color: white;
-}
-#container2{
-    width: 100%;
-    height: 5550px;
-    background-color: white;
 }
 #heading {
     width: 100%;
@@ -27,58 +81,11 @@
     background-color: #53565a;
     position: fixed;
     overflow: hidden;
-    z-index: 9;
 }
-/*#heading>img{*/
-    /*position: absolute;*/
-    /*top: 4px;*/
-    /*left: 863px;*/
-/*}*/
 .home{
-    position: absolute;
-    top: 4px;
-    left: 200px;
-}
-/*PC端样式*/
-/* @media screen and (min-width: 960px) {
-
-} */
-
-/*ipad端样式*/
-/* @media screen and (min-width: 750px) and (max-width: 960px) {
-
-} */
-
-
-/*手机端样式*/
-/* @media screen and (max-width: 750px) {
-
-} */
-#content_body{
-    width: 1520px;
-    height: 3400px;
-    background-color: #f5f5ff;
     margin-left: 200px;
-    margin-right: 200px;
+    margin-top: 4px;
 }
-#content_body2{
-    width: 1520px;
-    height: 5500px;
-    background-color: #f5f5ff;
-    margin-left: 200px;
-    margin-right: 200px;
-}
-#footing {
-    width: 100%;
-    height: 50px;
-    background-color: #53565a;
-    overflow: hidden;
-}
-/*img{*/
-    /*margin-left: 200px;*/
-    /*margin-top: 7px;*/
-/*}*/
-/*不使用图片自适应缩放效果时才用*/
 ul{
     list-style-type: none;
     float: left;
@@ -86,7 +93,7 @@ ul{
     position: fixed;
     right: 185px;
     display: flex;
-    margin-top: 14px;
+    margin-top: -38px;
 }
 a:link,a:visited{
     font-weight: bold;
@@ -101,524 +108,49 @@ li{
     display: inline;
     padding-left: 60px;
 }
-.picture1{
-    float: left;
-    position: absolute;
-    left: 0px;
-    top:50px;
-    z-index: 1;
+#content_body{
+    width: 80%;
+    height: 3400px;
+    text-align: center;
+    background-color: #f5f5ff;
+    margin: auto;
 }
-/*.picture2{*/
-    /*float: left;*/
-    /*position: absolute;*/
-    /*left: 0;*/
-    /*top:443px;*/
+.picture1{
+    width: 100%;
+    height: 400px;
+    max-width: 100%;
+    background: url("image/天空图片2.jpg") top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 0;
+    padding-top: 50px;
+ }
+/*.maintext1{*/
+    /*font-size: 48px;*/
+    /*font-weight: bold;*/
+    /*color: #53565a;*/
+    /*margin-top: -250px;*/
 /*}*/
-/*不使用图片自适应缩放效果时才用*/
+/*.maintext2{*/
+    /*font-size: 24px;*/
+    /*font-weight: bold;*/
+    /*color: #53565a;*/
+/*}*/
 .picture2{
-    position: absolute;
-    left: 200px;
-    top:443px;
-    width: 1520px;
-    height: 600px;
-    overflow: hidden;/*不加则整体中心缩放，加上则外框不变中心缩放*/
+    margin-top: 155px;
+    overflow: hidden;
 }
 .picture2>img{
     display: block;/*图片以块级元素显示*/
     width:100%;
     height:100%;
+    max-width: 100%;
     transition:all 1s;/*缩放变化所用时间*/
 }
 .picture2>img:hover{
     transform:scale(1.2);/*鼠标点击时缩放倍数*/
 }
-.maintext1{
-    font-size: 48px;
-    font-weight: bold;
-    color: #53565a;
-    position: absolute;
-    top:170px;
-    left: 745px;
-    z-index: 2;
-}
-.maintext2{
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: #53565a;
-    position: absolute;
-    top:230px;
-    left: 817px;
-    z-index: 2;
-}
-.case1text1{
-    font-size: 18px;
-    font-weight: bold;
-    color: #ffffff;
-    position: absolute;
-    top:530px;
-    left: 420px;
-}
-.case1text2{
-    font-size: 32px;
-    font-weight: bold;
-    color: #ffffff;
-    position: absolute;
-    top:550px;
-    left: 282px;
-}
-.case1text3{
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    position: absolute;
-    top:590px;
-    left: 338px;
-}
-.case2text1{
-    font-size: 32px;
-    font-weight: bold;
-    color: #53565a;
-    position: absolute;
-    top:1080px;
-    left: 840px;
-    padding: 5px;
-    border: solid 2px #99cc33;
-    box-shadow: 5px 5px 10px gray;
-}
-.case2text2{
-    font-size: 26px;
-    font-weight: bold;
-    color: #53565a;
-    position: absolute;
-    top:1160px;
-    left: 470px;
-}
-.case2text3{
-    font-size: 26px;
-    font-weight: bold;
-    color: #53565a;
-    position: absolute;
-    top:1160px;
-    left: 1180px;
-}
-.box {
-    width: 608px;
-    height: 240px;
-    background: url(images/地上半包式-哈尔滨松北转运站.png) no-repeat center;
-    background-size: cover;
-    position: absolute;
-    top:1350px;
-    left: 600px;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-.box::before, .box::after {
-    content: '';
-    border: 2px solid #2ecc71;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: -15px;
-    /* clip: rect(top, right, bottom, left) */
-    -webkit-animation: borderClip 8s linear infinite;
-    animation: borderClip 8s ease infinite;
-}
-.box::after {
-    -webkit-animation-delay: -4s;
-    animation-delay: -4s;
-}
-.box:hover::before, .box:hover::after {
-    -webkit-animation-play-state: paused;
-    animation-play-state: paused;
-}
-@-webkit-keyframes borderClip {
-    0%, 100% {
-        clip: rect(0px, 638px, 2px, 0px);
-    }
-    25% {
-        clip: rect(0px, 2px, 270px, 0px);
-    }
-    50% {
-        clip: rect(268px, 638px, 270px, 0px);
-    }
-    75% {
-        clip: rect(0px, 638px, 270px, 636px);
-    }
-}
-@keyframes borderClip {
-    0%, 100% {
-        clip: rect(0px, 638px, 2px, 0px);
-    }
-    25% {
-        clip: rect(0px, 2px, 270px, 0px);
-    }
-    50% {
-        clip: rect(268px, 638px, 270px, 0px);
-    }
-    75% {
-        clip: rect(0px, 638px, 270px, 636px);
-    }
-}
-.box2 {
-    width: 608px;
-    height: 240px;
-    background: url(images/地上半包式-常德刘家湾转运站.png) no-repeat center;
-    background-size: cover;
-    position: absolute;
-    top:1350px;
-    right: -20px;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-.box2::before, .box2::after {
-    content: '';
-    border: 2px solid #2ecc71;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: -15px;
-    /* clip: rect(top, right, bottom, left) */
-    -webkit-animation: borderClip 8s linear infinite;
-    animation: borderClip 8s ease infinite;
-}
-.box2::after {
-    -webkit-animation-delay: -4s;
-    animation-delay: -4s;
-}
-.box2:hover::before, .box2:hover::after {
-    -webkit-animation-play-state: paused;
-    animation-play-state: paused;
-}
-@-webkit-keyframes borderClip {
-    0%, 100% {
-        clip: rect(0px, 638px, 2px, 0px);
-    }
-    25% {
-        clip: rect(0px, 2px, 270px, 0px);
-    }
-    50% {
-        clip: rect(268px, 638px, 270px, 0px);
-    }
-    75% {
-        clip: rect(0px, 638px, 270px, 636px);
-    }
-}
-@keyframes borderClip {
-    0%, 100% {
-        clip: rect(0px, 638px, 2px, 0px);
-    }
-    25% {
-        clip: rect(0px, 2px, 270px, 0px);
-    }
-    50% {
-        clip: rect(268px, 638px, 270px, 0px);
-    }
-    75% {
-        clip: rect(0px, 638px, 270px, 636px);
-    }
-}
-.case2text4{
-    font-size: 18px;
-    font-weight: bold;
-    color: #53565a;
-    position: absolute;
-    top:1500px;
-    left: 365px;
-    border-bottom: 2px solid #53565a;
-    padding-bottom: 5px;
-}
-.case2text5{
-    font-size: 18px;
-    font-weight: bold;
-    color: #53565a;
-    position: absolute;
-    top:1500px;
-    left: 1080px;
-    border-bottom: 2px solid #53565a;
-    padding-bottom: 5px;
-}
-/*.picture3{*/
-    /*float: left;*/
-    /*position: absolute;*/
-    /*left: 0;*/
-    /*top:1600px;*/
-/*}*/
-/*不使用图片自适应缩放效果时才用*/
-.picture3{
-    position: absolute;
-    left: 200px;
-    top:1600px;
-    width: 1520px;
-    height: 600px;
-    overflow: hidden;/*不加则整体中心缩放，加上则外框不变中心缩放*/
-}
-.picture3>img{
-    display: block;/*图片以块级元素显示*/
-    width:100%;
-    height:100%;
-    transition:all 1s;/*缩放变化所用时间*/
-}
-.picture3>img:hover{
-    transform:scale(1.2);/*鼠标点击时缩放倍数*/
-}
-.case3text1{
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    position: absolute;
-    left: 360px;
-    top:2020px;
-}
-.case3text2{
-    font-size: 32px;
-    font-weight: bold;
-    color: white;
-    position: absolute;
-    left: 278px;
-    top:2040px;
-}
-.case3text3{
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    position: absolute;
-    left: 342px;
-    top:2080px;
-}
-.case4text1{
-    font-size: 32px;
-    font-weight: bold;
-    color: #53565a;
-    position: absolute;
-    top:2240px;
-    left: 840px;
-    padding: 5px;
-    border: solid 2px #99cc33;
-    box-shadow: 5px 5px 10px gray;
-}
-.case4text2{
-    font-size: 26px;
-    font-weight: bold;
-    color: #53565a;
-    position: absolute;
-    top:2320px;
-    left: 470px;
-}
-.case4text3{
-    font-size: 26px;
-    font-weight: bold;
-    color: #53565a;
-    position: absolute;
-    top:2320px;
-    left: 1180px;
-}
-.box3 {
-    width: 608px;
-    height: 240px;
-    background: url(images/全下沉式1.png) no-repeat center;
-    background-size: cover;
-    position: absolute;
-    top:2510px;
-    left: 600px;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-.box3::before, .box3::after {
-    content: '';
-    border: 2px solid #2ecc71;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: -15px;
-    /* clip: rect(top, right, bottom, left) */
-    -webkit-animation: borderClip 8s linear infinite;
-    animation: borderClip 8s ease infinite;
-}
-.box3::after {
-    -webkit-animation-delay: -4s;
-    animation-delay: -4s;
-}
-.box3:hover::before, .box3:hover::after {
-    -webkit-animation-play-state: paused;
-    animation-play-state: paused;
-}
-@-webkit-keyframes borderClip {
-    0%, 100% {
-        clip: rect(0px, 638px, 2px, 0px);
-    }
-    25% {
-        clip: rect(0px, 2px, 270px, 0px);
-    }
-    50% {
-        clip: rect(268px, 638px, 270px, 0px);
-    }
-    75% {
-        clip: rect(0px, 638px, 270px, 636px);
-    }
-}
-@keyframes borderClip {
-    0%, 100% {
-        clip: rect(0px, 638px, 2px, 0px);
-    }
-    25% {
-        clip: rect(0px, 2px, 270px, 0px);
-    }
-    50% {
-        clip: rect(268px, 638px, 270px, 0px);
-    }
-    75% {
-        clip: rect(0px, 638px, 270px, 636px);
-    }
-}
-.box4 {
-    width: 608px;
-    height: 240px;
-    background: url(images/全下沉式2.png) no-repeat center;
-    background-size: cover;
-    position: absolute;
-    top:2510px;
-    right: -20px;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-.box4::before, .box4::after {
-    content: '';
-    border: 2px solid #2ecc71;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: -15px;
-    /* clip: rect(top, right, bottom, left) */
-    -webkit-animation: borderClip 8s linear infinite;
-    animation: borderClip 8s ease infinite;
-}
-.box4::after {
-    -webkit-animation-delay: -4s;
-    animation-delay: -4s;
-}
-.box4:hover::before, .box4:hover::after {
-    -webkit-animation-play-state: paused;
-    animation-play-state: paused;
-}
-@-webkit-keyframes borderClip {
-    0%, 100% {
-        clip: rect(0px, 638px, 2px, 0px);
-    }
-    25% {
-        clip: rect(0px, 2px, 270px, 0px);
-    }
-    50% {
-        clip: rect(268px, 638px, 270px, 0px);
-    }
-    75% {
-        clip: rect(0px, 638px, 270px, 636px);
-    }
-}
-@keyframes borderClip {
-    0%, 100% {
-        clip: rect(0px, 638px, 2px, 0px);
-    }
-    25% {
-        clip: rect(0px, 2px, 270px, 0px);
-    }
-    50% {
-        clip: rect(268px, 638px, 270px, 0px);
-    }
-    75% {
-        clip: rect(0px, 638px, 270px, 636px);
-    }
-}
-.case4text4{
-    font-size: 18px;
-    font-weight: bold;
-    color: #53565a;
-    position: absolute;
-    top:2660px;
-    left: 365px;
-    border-bottom: 2px solid #53565a;
-    padding-bottom: 5px;
-}
-.case4text5{
-    font-size: 18px;
-    font-weight: bold;
-    color: #53565a;
-    position: absolute;
-    top:2660px;
-    left: 1080px;
-    border-bottom: 2px solid #53565a;
-    padding-bottom: 5px;
-}
-/*.picture4{*/
-    /*float: left;*/
-    /*position: absolute;*/
-    /*left: 0;*/
-    /*top:2760px;*/
-/*}*/
-/*不使用图片自适应缩放效果时才用*/
-.picture4{
-    position: absolute;
-    left: 200px;
-    top:2760px;
-    width: 1520px;
-    height: 600px;
-    overflow: hidden;/*不加则整体中心缩放，加上则外框不变中心缩放*/
-}
-.picture4>img{
-    display: block;/*图片以块级元素显示*/
-    width:100%;
-    height:100%;
-    transition:all 1s;/*缩放变化所用时间*/
-}
-.picture4>img:hover{
-    transform:scale(1.2);/*鼠标点击时缩放倍数*/
-}
-.case5text1{
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    position: absolute;
-    left: 1400px;
-    top:3180px;
-}
-.case5text2{
-    font-size: 32px;
-    font-weight: bold;
-    color: white;
-    position: absolute;
-    left: 1305px;
-    top:3200px;
-}
-.case5text3{
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    position: absolute;
-    left: 1312px;
-    top:3240px;
-}
-.footext1{
-    text-align: center;
-    font-size: 14px;
-    font-weight: normal;
-    color: white;
-    padding-top: 5px;
-}
-.footext2{
-    text-align: center;
-    font-size: 14px;
-    font-weight: normal;
-    color: white;
-    padding-bottom: 5px;
-}
+
 .rocket {
     width: 60px;
     height: 120px;
@@ -646,62 +178,14 @@ li{
             <li class="nav4"><a href="aboutus.html">关于我们</a></li>
         </ul></div>
         <div id="content_body">
-            <div class="picture1"><img src="images/天空图片2.jpg"></div>
+            <div class="picture1"></div>
             <div>
                 <div class="maintext1">用真实案例见证实力</div>
                 <div class="maintext2">企业文化：简单 专业 快执行</div>
             </div>
             <div>
                 <div class="picture2"><img src="images/半下沉-长沙仁和.jpg"></div>
-                <div class="case1text1">半下沉式建筑</div>
-                <div class="case1text2">长沙市第一垃圾中转处理厂</div>
-                <div class="case1text3">垃圾分类转运站-压榨+水平预压法</div>
             </div>
-            <div>
-                <div class="case2text1">地上半包式建筑</div>
-                <div class="case2text2">哈尔滨松北垃圾转运站</div>
-                <div class="box"></div>
-                <div class="case2text3">常德刘家湾垃圾转运站</div>
-                <div class="box2"></div>
-                <div class="case2text4">处理高效、适应性强、压实密度大，转运经济性优适用于日</br>处理
-                    400-2000t的大型垃圾站，特适用于日处理≥1500t或</br>转运
-                    距离＞50km的超大型垃圾站。</div>
-                <div class="case2text5">处理高效、适应性强、压实密度大，转运经济性优适用于日</br>处理
-                    400-2000t的大型垃圾站，特适用于日处理≥1500t或</br>转运
-                    距离＞50km的超大型垃圾站。</div>
-            </div>
-            <div>
-                <div class="picture3"><img src="images/地上全包式-宜春城北转运站.jpg"></div>
-                <div class="case3text1">地上全包式建筑</div>
-                <div class="case3text2">宜春城北垃圾转运站</div>
-                <div class="case3text3">竖直直压式-400t/d</div>
-            </div>
-            <div>
-                <div class="case4text1">全下沉式建筑</div>
-                <div class="case4text2">××××××垃圾转运站</div>
-                <div class="box3"></div>
-                <div class="case4text3">××××××垃圾转运站</div>
-                <div class="box4"></div>
-                <div class="case4text4">处理高效、适应性强、压实密度大，转运经济性优适用于日</br>处理
-                    400-2000t的大型垃圾站，特适用于日处理≥1500t或</br>转运
-                    距离＞50km的超大型垃圾站。</div>
-                <div class="case4text5">处理高效、适应性强、压实密度大，转运经济性优适用于日</br>处理
-                    400-2000t的大型垃圾站，特适用于日处理≥1500t或</br>转运
-                    距离＞50km的超大型垃圾站。</div>
-            </div>
-            <div>
-                <div class="picture4"><img src="images/长沙高新区垃圾转运站.jpg"></div>
-                <div class="case5text1">平进平出式建筑</div>
-                <div class="case5text2">长沙高新区垃圾转运站</div>
-                <div class="case5text3">垃圾分类转运站-水平直压+竖直直压法</div>
-            </div>
-        </div>
-        <div id="footing">
-            <div>
-                <div class="footext1">电话：0731-8888888    地址：湖南省长沙市高新区林语路288号    E-maile:yuexd@infore.com</div>
-                <div class="footext2">copyright 2019    长沙中联重科环境产业有限公司      版权所有 [湘ICP备××××××××号]</div>
-            </div>
-        </div>
     </div>
     <div class="rocket">
     <script
