@@ -7,7 +7,7 @@
     <title>中联环境分体式垃圾站业务部</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/中联logo.ico"/>
     <style>
-        /*PC端样式*/
+       /*PC端样式*/
 @media screen and (min-width: 1030px) {
     .home{
         margin-left: 200px;
@@ -23,6 +23,31 @@
         font-size: 24px;
         font-weight: bold;
         color: #53565a;
+    }
+    .navlogo{
+        display: none;
+    }
+    .picture1{
+        width: 100%;
+        height: 400px;
+        max-width: 100%;
+        background: url("image/天空图片2.jpg") top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: 0;
+        padding-top: 50px;
+    }
+    .picture2{
+        margin-top: 155px;
+        overflow: hidden;
+    }
+    .case2text1{
+        font-size: 32px;
+        font-weight: bold;
+        color: #53565a;
+        margin-top: 30px;
+        /*border: solid 2px #99cc33;*/
+        /*box-shadow: 5px 5px 10px gray;*/
     }
 }
 
@@ -46,6 +71,21 @@
         font-weight: bold;
         color: #53565a;
     }
+    .picture1{
+        width: 100%;
+        height: 400px;
+        max-width: 100%;
+        background: url("image/天空图片2.jpg") top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: 0;
+        padding-top: 50px;
+    }
+    .picture2{
+        margin-top: 155px;
+        overflow: hidden;
+    }
+
 }
 
 
@@ -60,16 +100,44 @@
         top: 0;
     }
     .maintext1{
-        font-size: 32px;
+        font-size: 28px;
         font-weight: bold;
         color: #53565a;
-        margin-top: -250px;
+        margin-top: -110px;
     }
     .maintext2{
-        font-size: 16px;
+        font-size: 14px;
         font-weight: bold;
         color: #53565a;
     }
+    .navlogo{
+        display: block;
+        margin-left: 310px;
+        margin-top: 12px;
+    }
+    .picture1{
+        width: 100%;
+        height: 200px;
+        max-width: 100%;
+        background: url("image/天空图片2.jpg") top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: 0;
+        padding-top: 5px;
+    }
+    .picture2{
+        margin-top: 54px;
+        overflow: hidden;
+    }
+    .case2text1{
+        font-size: 20px;
+        font-weight: bold;
+        color: #53565a;
+        margin-top: 20px;
+        /*border: solid 2px #99cc33;*/
+        /*box-shadow: 5px 5px 10px gray;*/
+    }
+
 }
 body{
     margin: 0;
@@ -81,6 +149,7 @@ body{
     background-color: #53565a;
     position: fixed;
     overflow: hidden;
+    z-index: 1;
 }
 .home{
     margin-left: 200px;
@@ -109,22 +178,14 @@ li{
     padding-left: 60px;
 }
 #content_body{
-    width: 100%;
+    width: 80%;
     height: 3400px;
     text-align: center;
     background-color: #f5f5ff;
     margin: auto;
 }
-.picture1{
-    width: 100%;
-    height: 400px;
-    max-width: 100%;
-    background: url("images/天空图片2.jpg") top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-left: 0;
-    padding-top: 50px;
- }
+
+
 /*.maintext1{*/
     /*font-size: 48px;*/
     /*font-weight: bold;*/
@@ -136,10 +197,6 @@ li{
     /*font-weight: bold;*/
     /*color: #53565a;*/
 /*}*/
-.picture2{
-    margin-top: 155px;
-    overflow: hidden;
-}
 .picture2>img{
     display: block;/*图片以块级元素显示*/
     width:100%;
@@ -149,20 +206,6 @@ li{
 }
 .picture2>img:hover{
     transform:scale(1.2);/*鼠标点击时缩放倍数*/
-}
-
-.rocket {
-    width: 60px;
-    height: 120px;
-    background: url(images/rocket1.png) top;
-    background-size: cover;
-    position: fixed;
-    right: 50px;
-    bottom: 50px;
-    display: none;
-}
-.rocket:hover {
-    background-position: bottom;
 }
     </style>
 </head>
